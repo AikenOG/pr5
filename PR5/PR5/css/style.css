@@ -1,0 +1,674 @@
+/* Стили для навигационной панели */
+* {
+	margin: 0;
+	padding: 0;
+  }
+  
+
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	background-color: #000000;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5%;
+  }
+  
+  /* Стили для логотипа */
+  .logo {
+	font-size: 36px;
+	font-weight: bold;
+	color: #FFFFFF;
+  }
+  
+  /* Стили для навигационных ссылок */
+  .nav-links {
+	position: relative;
+	right: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .nav-links a {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	margin-left: 50px;
+	text-transform: uppercase;
+	position: relative;
+  }
+  
+  .nav-links a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: -10px;
+	left: 0;
+	background-color: #E00000;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .nav-links a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+  }
+  
+  /* Стили для надписей Главная, Наша команда, Админ панель */
+  .nav-links span {
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-left: 50px;
+  }
+  
+  /* Стили для первого блока */
+.first-block {
+	position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/img/Marble_Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  
+  /* Стили для фонового изображения */
+  .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+  }
+  
+  .background-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  /* Стили для текста */
+  .text {
+	position: absolute;
+	top: 30%;
+	left: 55%;
+	transform: translateY(-50%);
+	color: #000000;
+	text-align: left;
+	font-size: 75px;
+	font-weight: bold;
+	line-height: 1.2;
+  }
+  .text h1
+  {
+	font-size: 150px;
+  }
+  .text p {
+	margin-top: -100px;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-left: -30px;
+  }
+  
+  /* Стили для карточки */
+  .card-block {
+	position: absolute;
+	top: 753px;
+	left: 1400px;
+	width: 571px;
+	transform: translate(-50%, -50%);
+	background-color: #E00000;
+	width: 571px;
+	height: 377px;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.2;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-block:hover {
+	transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  .card-block h2 {
+	font-size: 170px;
+	font-weight: bold;
+	line-height: 200px;
+	color: #fff;
+	margin-top: 220px;
+  }
+/* Стили для текста внутри карточки */
+.card-block h3 {
+	font-size: 50px;
+  font-weight: 400;
+  line-height: 73px;
+  color: #fff;
+  margin-top: -10px;
+  }
+  
+  .card-block p {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 38px;
+	color: #fff;
+	margin-top: -0px;
+  }
+
+  .parent-container {
+    overflow: hidden;
+}
+  
+  .card-block .card-button {
+	margin-top: 50px;
+	display: inline-block;
+  }
+  
+  .card-block .card-button:first-child {
+	margin-right: 36px;
+  }
+  /* Стили для кнопок */
+  .button-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+  }
+  
+  /* Стили для кнопки "Оставить заявку" */
+  .apply-button {
+	width: 250px;
+	height: 77px;
+	background-color: #FFFFFF;
+	border: 2px solid #E00000;
+	border-radius: 41px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: #E00000;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-right: 36px;
+	margin-top: 40px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+	background-color: #E00000;
+	color: #FFFFFF;
+	cursor: pointer;
+  }
+  
+  .apply-button span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+  }
+  
+  /* Стили для кнопки "Подробнее" */
+  .details-button {
+	width: 250px;
+	height: 77px;
+	background-color: #E00000;
+	border: 2px solid #FFFFFF;
+	border-radius: 41px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 40px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .details-button:hover {
+	background-color: #FFFFFF;
+	color: #E00000;
+	cursor: pointer;
+  }
+  
+  /* Стили для второго блока */
+
+.second-block {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('/img/fitness_worldclass.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+  }
+  
+  .second-block-front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(8, 2, 24, 0.42);
+  }
+  
+  /* Стили для заголовка */
+  .header {
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .header h1 {
+	position: relative;
+	white-space: nowrap;
+	font-family: 'BlinkMacSystemFont';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 106px;
+	line-height: 126px;
+	text-align: center;
+	margin-top: 47px;
+	letter-spacing: 0.045em;
+	color: #FFFFFF;
+  }
+  
+  /* Стили для описания */
+  .description {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 120px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .description p {
+	font-family: 'BlinkMacSystemFont';
+	font-style: italic;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 48px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.77);
+	margin: 0;
+	width: 100%;
+  }
+  
+  /* Стили для слайдера */
+  
+ .slider-container {
+  position: absolute;
+  width: 100%;
+  height: 94px;
+  left: 50%;
+  top: 540px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-text {
+  position: relative;
+  bottom: 60%;
+  font-family: 'BlinkMacSystemFont';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 47px;
+  text-align: center;
+  color: #FFFFFF;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-text p {
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slider-text.fade-out {
+  opacity: 0;
+}
+
+.slider-arrow {
+  font-size: 24px;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.slider-arrow:active {
+  transform: scale(0.9);
+}
+
+.prev-arrow {
+  margin-right: 10px;
+}
+
+.next-arrow {
+  margin-left: 10px;
+}
+  
+  .icons-container {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	overflow: auto;
+	padding: 0 50px; /* Добавьте горизонтальные отступы внутри контейнера иконок */
+  }
+  
+  .icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 150px; /* Увеличьте отступ между иконками */
+  }
+  
+  .icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 134px; /* Установите ширину иконки */
+	text-align: center;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+	transform: translateY(-10px);
+  }
+  
+  .icon:last-child {
+	margin-right: 0;
+  }
+  
+  .icon img {
+	width: 134px;
+	height: 134px;
+  }
+  
+  .icon p {
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-top: 7px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .video-container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /* соотношение сторон 16:9 */
+  }
+  
+  .video-container video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+  .fourth-block {
+	position: relative;
+  }
+  
+  nav {
+	background-color: #000;
+	color: #fff;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  nav h1 {
+	font-size: 44px;
+	font-weight: 700;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .card-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding-top: 50px;
+  }
+  
+  .card {
+	width: 300px;
+	bottom: 30px;
+	height: 500px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+	box-shadow: 0 0 10px rgb(14, 14, 14);
+  }
+  
+  .card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-image  {
+	height: 70%;
+	background-size: cover;
+	background-position: center;
+	background-color: #eee;
+  }
+  
+  .card-content {
+	padding: 20px;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .card-content h2 {
+	margin-bottom: 10px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 400;
+	font-size: 27px;
+	color: #ffffff;
+  }
+  
+  .card-content p {
+	font-size: 18px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #ffffff;
+	margin-bottom: 15%;
+  }
+
+  .card:nth-child(1) .card-content p {
+	color: #ffffff;
+  }
+  
+  .card:nth-child(2) .card-content p {
+	color: rgb(255, 255, 255);
+  }
+  
+  .card:nth-child(3) .card-content p {
+	color: #ffffff;
+  }
+  
+  .card:nth-child(1) .card-content h2 {
+	color: #ffffff;
+  }
+  
+  .card:nth-child(2) .card-content h2 {
+	color: #ffffff;
+  }
+  
+  .card:nth-child(3) .card-content h2 {
+	color: #ffffff;
+  }
+  
+  
+  
+  
+  footer {
+	background-color: #000;
+	color: #fff;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+  }
+
+  footer p {
+	font-size: 32px;
+	font-weight: 500;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }  
+  
+  /* Модальное окно */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+  @keyframes slideDown {
+	0% {
+	  transform: translateY(-100%);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border-radius: 10px;
+	width: 25%;
+	max-width: 500px;
+	animation: slideDown 0.3s ease-out;
+  }
+  
+  .modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .modal-title {
+	margin-left: 35%;
+	margin-top: -4%;
+  }
+  
+  .modal-close {
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  .modal-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .modal-input {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	text-align: center;
+  }
+  
+  input[type=text], input[type=password] {
+	border-radius: 25px;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+  }
+  
+  
+  .modal-btn {
+	background-color: #4CAF50;
+	color: white;
+	font-weight: bold;
+	padding: 8px 16px; /* уменьшаем размер кнопки */
+	border: none;
+	cursor: pointer;
+	border-radius: 50px; /* делаем кнопку более круглой */
+	text-align: center;
+	margin-left: 35%;
+  }
+  
+  .modal-btn:hover {
+	background-color: #45a049;
+  }
+  
